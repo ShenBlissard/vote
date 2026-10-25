@@ -1,0 +1,618 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "id": "3211ad86-9b54-4297-b072-724aeebb714c",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "ballots": {
+      "name": "ballots",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "poll_id": {
+          "name": "poll_id",
+          "type": "varchar(32)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "voter_id": {
+          "name": "voter_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "submitted_at": {
+          "name": "submitted_at",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "ballots_poll_idx": {
+          "name": "ballots_poll_idx",
+          "columns": [
+            "poll_id"
+          ],
+          "isUnique": false
+        },
+        "ballots_voter_idx": {
+          "name": "ballots_voter_idx",
+          "columns": [
+            "voter_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "ballots_poll_id_polls_id_fk": {
+          "name": "ballots_poll_id_polls_id_fk",
+          "tableFrom": "ballots",
+          "tableTo": "polls",
+          "columnsFrom": [
+            "poll_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "ballots_voter_id_voters_id_fk": {
+          "name": "ballots_voter_id_voters_id_fk",
+          "tableFrom": "ballots",
+          "tableTo": "voters",
+          "columnsFrom": [
+            "voter_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "ballots_id": {
+          "name": "ballots_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "candidates": {
+      "name": "candidates",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "poll_id": {
+          "name": "poll_id",
+          "type": "varchar(32)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "sort_order": {
+          "name": "sort_order",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        }
+      },
+      "indexes": {
+        "candidates_poll_idx": {
+          "name": "candidates_poll_idx",
+          "columns": [
+            "poll_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "candidates_poll_id_polls_id_fk": {
+          "name": "candidates_poll_id_polls_id_fk",
+          "tableFrom": "candidates",
+          "tableTo": "polls",
+          "columnsFrom": [
+            "poll_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "candidates_id": {
+          "name": "candidates_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "choices": {
+      "name": "choices",
+      "columns": {
+        "ballot_id": {
+          "name": "ballot_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "candidate_id": {
+          "name": "candidate_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "choices_candidate_idx": {
+          "name": "choices_candidate_idx",
+          "columns": [
+            "candidate_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "choices_ballot_id_ballots_id_fk": {
+          "name": "choices_ballot_id_ballots_id_fk",
+          "tableFrom": "choices",
+          "tableTo": "ballots",
+          "columnsFrom": [
+            "ballot_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "choices_candidate_id_candidates_id_fk": {
+          "name": "choices_candidate_id_candidates_id_fk",
+          "tableFrom": "choices",
+          "tableTo": "candidates",
+          "columnsFrom": [
+            "candidate_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "choices_ballot_id_candidate_id_pk": {
+          "name": "choices_ballot_id_candidate_id_pk",
+          "columns": [
+            "ballot_id",
+            "candidate_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "polls": {
+      "name": "polls",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(32)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "creator_id": {
+          "name": "creator_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar(1024)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "''"
+        },
+        "min_choices": {
+          "name": "min_choices",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "max_choices": {
+          "name": "max_choices",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "shuffle_candidates": {
+          "name": "shuffle_candidates",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "anonymous": {
+          "name": "anonymous",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "deadline": {
+          "name": "deadline",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "allow_change": {
+          "name": "allow_change",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "auto_publish": {
+          "name": "auto_publish",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "pub_top_n": {
+          "name": "pub_top_n",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": -1
+        },
+        "turnout_mode": {
+          "name": "turnout_mode",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'both'"
+        },
+        "published": {
+          "name": "published",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "status": {
+          "name": "status",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'open'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "polls_creator_idx": {
+          "name": "polls_creator_idx",
+          "columns": [
+            "creator_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "polls_creator_id_users_id_fk": {
+          "name": "polls_creator_id_users_id_fk",
+          "tableFrom": "polls",
+          "tableTo": "users",
+          "columnsFrom": [
+            "creator_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "polls_id": {
+          "name": "polls_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "sessions": {
+      "name": "sessions",
+      "columns": {
+        "token": {
+          "name": "token",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "sessions_user_idx": {
+          "name": "sessions_user_idx",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "sessions_user_id_users_id_fk": {
+          "name": "sessions_user_id_users_id_fk",
+          "tableFrom": "sessions",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "sessions_token": {
+          "name": "sessions_token",
+          "columns": [
+            "token"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "users": {
+      "name": "users",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "code": {
+          "name": "code",
+          "type": "varchar(4)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "users_code_name_idx": {
+          "name": "users_code_name_idx",
+          "columns": [
+            "code",
+            "name"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "users_id": {
+          "name": "users_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "voters": {
+      "name": "voters",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "poll_id": {
+          "name": "poll_id",
+          "type": "varchar(32)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "seq": {
+          "name": "seq",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": true
+        }
+      },
+      "indexes": {
+        "voters_poll_idx": {
+          "name": "voters_poll_idx",
+          "columns": [
+            "poll_id"
+          ],
+          "isUnique": false
+        },
+        "voters_user_idx": {
+          "name": "voters_user_idx",
+          "columns": [
+            "user_id"
+          ],
+          "isUnique": false
+        },
+        "voters_poll_user_idx": {
+          "name": "voters_poll_user_idx",
+          "columns": [
+            "poll_id",
+            "user_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "voters_poll_id_polls_id_fk": {
+          "name": "voters_poll_id_polls_id_fk",
+          "tableFrom": "voters",
+          "tableTo": "polls",
+          "columnsFrom": [
+            "poll_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "voters_user_id_users_id_fk": {
+          "name": "voters_user_id_users_id_fk",
+          "tableFrom": "voters",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "voters_id": {
+          "name": "voters_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    }
+  },
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {},
+    "indexes": {}
+  }
+}

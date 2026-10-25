@@ -1,0 +1,23 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/0umf92h1sb77c.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+6:"/_next/static/chunks/1i1hseygz-i5z.js"
+7:"/_next/static/chunks/3yisi8tze0v6x.js"
+8:I[22016,["$2","$6","$7"],""]
+9:I[58981,["$2","$6","$7"],"default"]
+a:I[86183,["$2","$6","$7"],"default"]
+b:I[97367,["$2"],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[97367,["$2"],"$e"]
+11:"MetadataBoundary"
+12:I[97367,["$2"],"$11"]
+14:I[68027,["$2"],"default",1]
+:HL["/_next/static/chunks/1voy3hw7pq3r6.css","style"]
+5:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"children":[["$","header",null,{"className":"hero","children":["$","div",null,{"className":"hero-inner","children":[["$","h1",null,{"children":"班级投票"}],["$","p",null,{"children":"发起投票 · 分享微信群 · 一人一票 · 自主公布结果"}],["$","$L8",null,{"href":"/create","className":"btn-hero","children":"发起投票"}]]}]}],["$","main",null,{"className":"container","children":[["$","div",null,{"className":"card","children":[["$","h2",null,{"className":"section-title","children":"如何使用"}],["$","ol",null,{"className":"steps-list","children":[["$","li",null,{"children":[["$","b",null,{"children":"发起投票"}],"：填写主题、候选人名单和班级参与名单"]}],["$","li",null,{"children":[["$","b",null,{"children":"分享到群"}],"：把投票链接发到微信群，大家点开即可投票"]}],["$","li",null,{"children":[["$","b",null,{"children":"公布结果"}],"：到达截止时间后，哪些内容公布、何时公布由你决定"]}]]}]]}],["$","$L9",null,{}],["$","$La",null,{}],["$","p",null,{"className":"foot-note","children":"提示：请保存好每次投票的管理链接，它是管理投票的唯一凭证"}]]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1i1hseygz-i5z.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/3yisi8tze0v6x.js","async":true,"nonce":"$undefined"}]],["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1voy3hw7pq3r6.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0umf92h1sb77c.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],"p":false,"v":null},"c":"$Q5"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1voy3hw7pq3r6.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"uFd7acDvY5n7Q7l7ceoGK"}
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:I[27201,["$2"],"IconMark"]
+d:null
+13:[["$","title","0",{"children":"班级投票"}],["$","meta","1",{"name":"description","content":"发起班级投票，分享到微信群，一人一票，自主公布结果"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L15","3",{}]]

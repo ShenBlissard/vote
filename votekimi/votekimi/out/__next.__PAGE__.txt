@@ -1,0 +1,28 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/0umf92h1sb77c.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+8:"/_next/static/chunks/1i1hseygz-i5z.js"
+9:"/_next/static/chunks/3yisi8tze0v6x.js"
+a:I[22016,["$2","$8","$9"],""]
+b:I[58981,["$2","$8","$9"],"default"]
+c:I[86183,["$2","$8","$9"],"default"]
+d:I[97367,["$2"],"OutletBoundary"]
+e:"$Sreact.suspense"
+11:"ViewportBoundary"
+12:I[97367,["$2"],"$11"]
+13:"MetadataBoundary"
+14:I[97367,["$2"],"$13"]
+15:I[27201,["$2"],"IconMark"]
+:HL["/_next/static/chunks/1voy3hw7pq3r6.css","style"]
+6:X
+7:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"children":[["$","header",null,{"className":"hero","children":["$","div",null,{"className":"hero-inner","children":[["$","h1",null,{"children":"班级投票"}],["$","p",null,{"children":"发起投票 · 分享微信群 · 一人一票 · 自主公布结果"}],["$","$La",null,{"href":"/create","className":"btn-hero","children":"发起投票"}]]}]}],["$","main",null,{"className":"container","children":[["$","div",null,{"className":"card","children":[["$","h2",null,{"className":"section-title","children":"如何使用"}],["$","ol",null,{"className":"steps-list","children":[["$","li",null,{"children":[["$","b",null,{"children":"发起投票"}],"：填写主题、候选人名单和班级参与名单"]}],["$","li",null,{"children":[["$","b",null,{"children":"分享到群"}],"：把投票链接发到微信群，大家点开即可投票"]}],["$","li",null,{"children":[["$","b",null,{"children":"公布结果"}],"：到达截止时间后，哪些内容公布、何时公布由你决定"]}]]}]]}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","p",null,{"className":"foot-note","children":"提示：请保存好每次投票的管理链接，它是管理投票的唯一凭证"}]]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1i1hseygz-i5z.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/3yisi8tze0v6x.js","async":true}]],["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]]}],"p":"$@10","v":null,"s":"$6"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1voy3hw7pq3r6.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0umf92h1sb77c.js","async":true}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}]}]]}],"p":"$@5","v":null,"s":"$6"},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L14",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"班级投票"}],["$","meta","1",{"name":"description","content":"发起班级投票，分享到微信群，一人一票，自主公布结果"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L15","3",{}]]}]}],null]}],null]}],"p":"$@16","v":null,"s":"$6"}},"a":"$@17","u":"$@18","b":"uFd7acDvY5n7Q7l7ceoGK"}
+f:null
+6:300
+18:true
+6:C
+17:0
+5:"$undefined"
+16:"$undefined"
+10:"$undefined"
